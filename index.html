@@ -269,7 +269,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+          <iframe src="https://www.youtube.com/embed/jcGyD2dRo1g?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
@@ -291,10 +291,9 @@
           <p>
             We sought to capture the very essence of the 3D scene – the distance of each pixel from the camera in every frame. This crucial information, aptly named depth, unlocks a deeper understanding of the environment. To achieve this, we employed a pre-trained depth estimation model known as Depth Anything.
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
+          <img src="./static/images/depth.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
         </div>
       </div>
       <!--/ Visual Effects. -->
@@ -308,15 +307,56 @@
              We aim to determine the apparent motion of pixels between consecutive frames within a video sequence. This motion information is crucial for understanding object and body movements in the scene.
 
             </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
+            <img src="./static/images/optical_flow.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">2D Results</h2>
+          <p>
+            Our model achieved near zero loss.
+          </p>
+          <img src="./static/images/2d_results.png"
+                 class=""
+                 alt="Interpolate start reference image."/>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <h2 class="title is-3">3D Results</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+             Our model had a fairly good loss.
+            </p>
+            <img src="./static/images/3d_results.png"
+                 class=""
+                 alt="Interpolate start reference image."/>
             </video>
           </div>
 
         </div>
       </div>
     </div>
+  </div>
+</section>
+    
     <!--/ Matting. -->
 
     <!-- Animation. -->
@@ -411,8 +451,7 @@
     </div> -->
     <!--/ Concurrent Work. -->
 
-  </div>
-</section>
+
 
 
 <!-- <section class="section" id="BibTeX">
