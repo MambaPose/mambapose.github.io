@@ -112,10 +112,10 @@
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper</span>
+                  <span>Poster</span>
                 </a>
               </span>
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -123,7 +123,7 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Video Link. -->
               <span class="link-block">
                 <a href=""
@@ -162,7 +162,7 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -176,10 +176,10 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -234,7 +234,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -245,24 +245,19 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            This project focuses on enhancing the accuracy and efficiency of optical flow and depth estimation techniques in computer vision, which are pivotal for comprehending motion and scene structure. These capabilities are essential across a variety of applications, from autonomous driving to augmented reality. Despite significant advancements, existing methods often face challenges in complex scenes, dealing with occlusions, and operating within textureless regions. This has led to a concerted effort to develop more sophisticated methodologies.
           </p>
           <p>
-            Our project is centered around advancing 3D pose estimation, a critical task in various applications such as robotics, motion capture, and human-computer interaction. Central to this endeavor is the accurate estimation of optical flow and depth, which serve as foundational components for reconstructing 3D poses from 2D images.
-
-We tackle the challenges inherent in this process, including complexities in scenes, occlusions, and textureless regions, by employing state-of-the-art techniques such as RAFT for optical flow estimation and Depth Anything for depth estimation. These methodologies excel in capturing intricate motion patterns and estimating depth from diverse input modalities, laying the groundwork for comprehensive scene understanding.
+            Our proposed solution integrates state-of-the-art techniques, specifically RAFT for optical flow estimation, Depth Anything for depth estimation, and MambaPose for advanced pose estimation. RAFT is renowned for its ability to capture detailed motion patterns with high accuracy. Depth Anything provides versatile depth estimation from a range of input modalities. MambaPose enhances this suite by offering precise 3D pose estimation capabilities, crucial for understanding the dynamics and geometry of scenes involving human subjects.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Methodologically, we leverage RAFT, Depth Anything, and MambaPose, optimizing their performance for real-world applications. This involves meticulous experimentation and parameter tuning to ensure the robustness and efficiency of our solutions. MambaPose, in particular, is integrated to enhance the system's ability to interpret complex human movements within dynamic environments, making it highly relevant for scenarios where human interaction is significant.
+          </p>
+          <p>
+            The results of this integrated approach demonstrate significant improvements in optical flow accuracy, depth estimation quality, and pose estimation precision compared to baseline methods. Our methods exhibit superior performance in challenging conditions, including fast motion, occlusions, and textureless areas. The inclusion of MambaPose adds an additional layer of functionality by accurately capturing human poses, which is critical for applications such as interactive gaming, sports analytics, and real-time surveillance.
+          </p>
+          <p>
+            Overall, this work contributes to advancing the state-of-the-art in computer vision by enhancing the accuracy and efficiency of optical flow, depth estimation, and human pose estimation techniques. Through these integrated solutions, we aim to provide a more comprehensive understanding of scene dynamics and geometry, pushing the boundaries of what is achievable in complex and interaction-rich environments.
           </p>
         </div>
       </div>
@@ -292,10 +287,9 @@ We tackle the challenges inherent in this process, including complexities in sce
       <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+          <h2 class="title is-3">Depth</h2>
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            We sought to capture the very essence of the 3D scene – the distance of each pixel from the camera in every frame. This crucial information, aptly named depth, unlocks a deeper understanding of the environment. To achieve this, we employed a pre-trained depth estimation model known as Depth Anything.
           </p>
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/dollyzoom-stacked.mp4"
@@ -307,12 +301,12 @@ We tackle the challenges inherent in this process, including complexities in sce
 
       <!-- Matting. -->
       <div class="column">
-        <h2 class="title is-3">Matting</h2>
+        <h2 class="title is-3">Optical Flow</h2>
         <div class="columns is-centered">
           <div class="column content">
             <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
+             We aim to determine the apparent motion of pixels between consecutive frames within a video sequence. This motion information is crucial for understanding object and body movements in the scene.
+
             </p>
             <video id="matting-video" controls playsinline height="100%">
               <source src="./static/videos/matting.mp4"
@@ -326,12 +320,12 @@ We tackle the challenges inherent in this process, including complexities in sce
     <!--/ Matting. -->
 
     <!-- Animation. -->
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
+        <h2 class="title is-3">Animation</h2> -->
 
         <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <!-- <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
             We can also animate the scene by interpolating the deformation latent codes of two input
@@ -361,11 +355,11 @@ We tackle the challenges inherent in this process, including complexities in sce
             <p class="is-bold">End Frame</p>
           </div>
         </div>
-        <br/>
+        <br/> -->
         <!--/ Interpolating. -->
 
         <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
         <div class="content has-text-justified">
           <p>
             Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
@@ -382,16 +376,16 @@ We tackle the challenges inherent in this process, including complexities in sce
             <source src="./static/videos/replay.mp4"
                     type="video/mp4">
           </video>
-        </div>
+        </div> -->
         <!--/ Re-rendering. -->
-
+<!-- 
       </div>
-    </div>
+    </div> -->
     <!--/ Animation. -->
 
 
     <!-- Concurrent Work. -->
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
 
@@ -414,14 +408,14 @@ We tackle the challenges inherent in this process, including complexities in sce
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Concurrent Work. -->
 
   </div>
 </section>
 
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{park2021nerfies,
@@ -431,16 +425,16 @@ We tackle the challenges inherent in this process, including complexities in sce
   year      = {2021},
 }</code></pre>
   </div>
-</section>
+</section> -->
 
 
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link"
+      <!-- <a class="icon-link"
          href="./static/mambapose_paper.pdf">
         <i class="fas fa-file-pdf"></i>
-      </a>
+      </a> -->
       <a class="icon-link" href="https://github.com/MelihDarcanxyz" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
